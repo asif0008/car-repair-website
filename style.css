@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #dc3545;
+    --black-color: #212121;
+    --grey-color: #CECECE;
+    --white-color: #FFFFFF;
+}
+
+.bg-primary-main {
+    background: var(--primary-color);
+}
+
+.header {
+    background: var(--black-color);
+}
+
+.social-icons {
+    padding: 5px;
+    background: var(--grey-color);
+    border-radius: 50%;
+}
+
+.social-icons:hover {
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: all .50s ease;
+}
+
+.nav-link {
+    /* letter-spacing: 1px; */
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--grey-color) !important;
+}
+
+.heading-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.sub-heading-text {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.background-img-gallery {
+    background: url('/images/Work\ Gallery.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 100;
+}
+
+.background-img-contact {
+    background: url('/images/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+}
+
+.form-container {
+    width: 60%;
+}
+
+.empolye-icons {
+    padding: 3px 5px;
+    background: var(--grey-color);
+    color: white;
+    transition: all  .50s ease;
+    margin-right: 2px;
+}
+
+.empolye-icons:hover {
+    color: var(--primary-color);
+}
+
+.divider {
+    width: 100%;
+    border: 1px solid var(--grey-color);
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+
+.footer {
+    background: url('/images/Footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+}
+
+.footer-icons a i:hover  {
+    color: var(--primary-color) !important;
+    transition: all .50s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color) !important;
+    transition: all .50s ease;
+}
+
+.bi-arrow-up-short {
+    font-size: 2rem;
+    cursor: pointer;
+    background: var(--grey-color);
+    padding: 2px 9px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    width: 25px;
+    height: 25px;
+}
+
+.reviews-width {
+    width: 50%;
+}

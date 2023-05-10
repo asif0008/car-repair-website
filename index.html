@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquiries.css">
+    <!-- bootstrap icons cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Car Repair</title>
+    <link rel="icon" type="image/icon" href="/images/favicon.ico">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header container-fluid-xl w-100 h-25" id="/">
+        <div class="container w-100 d-flex flex-row justify-content-between justify-content-lg-center justify-content-xl-center px-lg-5 px-xl-5 gap py-3 text-white">
+            <a href="/"><img class="px-md-3 px-lg-3 px-xl-3 w-20 h-auto" src="/images/Rectangle 1.png" alt="img"></a>
+            <div class="d-flex d-none d-lg-block d-xl-block flex-column px-3">
+                <span class="d-flex gap-2 align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg>Email</span>
+                <a class="mx-4 cursor-pointer text-white text-decoration-none link-secondary" href="mailto:carrepair@gmail.com">carrepair@gmail.com</a>
+            </div>
+            <div class="d-flex d-none d-lg-block d-xl-block flex-column px-3">
+                <span class="d-flex gap-2 align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                  </svg>Call Now</span>
+                <a class="mx-4 cursor-pointer text-white text-decoration-none link-secondary" href="tel:(+1) 96 716 6879">(+1) 96 716 6879</a>
+            </div>
+            <div class="d-flex align-items-center justify-content-center gap-2">
+                <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+                <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+                <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                </svg>
+                <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="container w-100 mt-3 bg-danger">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#services">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#teams">Teams</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#gallery">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#reviews">Reviews</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact Us</a>
+                      </li>
+                    </ul>
+                    <span class="float-lg-end float-xl-end d-flex align-items-center">
+                        <a class="nav-link text-white" href="#">ORDER A PAINTING</a>
+                    </span>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="w-100 h-auto position-relative">
+        <img src="/images/Home - Banner.png" alt="hero image" class="image-fluid w-100 h-auto">
+        <h1 class="heading-text position-absolute top-50 start-50 translate-middle text-center text-white">FIND THE BEST <br>
+        SERVICES FOR YOUR CAR</h1>
+    </div>
+
+    <!-- About Section -->
+    <div class="container py-3 py-sm-3 py-md-5 py-lg-5 py-xl-5" id="about">
+      <div class="row px-lg-5 px-xl-5">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-4">
+          <img src="/images/Rectangle 2 (1).png" alt="img" class="care-image image-fluid text-center-sm">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 pt-lg-4 ps-xl-5 pt-md-4 pt-sm-4 pt-xs-3 pt-3">
+          <h1 class="sub-heading-text">LET’S INTRODUCE CA<span style="color:#dc3545">RE</span></h1>
+          <p class="pt-2 text-secondary">There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form by injected humour, or random is words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
+          <div class="row mt-4">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex">
+              <img src="/images/Component 2.png" width="50px" height="50px" alt="img" class="image-fluid">
+              <div class="d-flex flex-column ps-3">
+                <h6>Break Checkup</h6>
+                <p class="text-secondary">Nam eget justo risus Morbi elit ree nulla, eleifend vitae justo et, laoreet tincidunt metus. Nam eget justo risus Morbi elit ree nulla</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex">
+              <img src="/images/Component 2-1.png" width="50px" height="50px" alt="img" class="image-fluid">
+              <div class="d-flex flex-column ps-3">
+                <h6>Speed Miter Repair</h6>
+                <p class="text-secondary">Nam eget justo risus Morbi elit ree nulla, eleifend vitae justo et, laoreet tincidunt metus. Nam eget justo risus Morbi elit ree nulla</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex">
+              <img src="/images/Component 2-2.png" width="50px" height="50px" alt="img" class="image-fluid">
+              <div class="d-flex flex-column ps-3">
+                <h6>Inspection</h6>
+                <p class="text-secondary">Nam eget justo risus Morbi elit ree nulla, eleifend vitae justo et, laoreet tincidunt metus. Nam eget justo risus Morbi elit ree nulla</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex">
+              <img src="/images/Component 2-3.png" width="50px" height="50px" alt="img" class="image-fluid">
+              <div class="d-flex flex-column ps-3">
+                <h6>Upgrades</h6>
+                <p class="text-secondary">Nam eget justo risus Morbi elit ree nulla, eleifend vitae justo et, laoreet tincidunt metus. Nam eget justo risus Morbi elit ree nulla</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Card Section -->
+    <div class="container mx-auto row py-3 py-lg-4 py-xl-4" id="services">
+      <div class="col text-center px-lg-5 px-xl-5">
+        <h2 class="sub-heading-text">OUR SERVICES</h2>
+        <p class="text-secondary mx-auto px-md-5 px-lg-5 px-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor risus sit amet augue tempor, eget consequat risus porta. Proin condimentum nec ex sed dapibus.</p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="container">
+      <div class="row g-3 px-lg-5 px-xl-5">
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-3 px-lg-5 px-xl-5 pt-2">
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="card border-0 rounded-0">
+            <img src="/images/card.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">Car Cleaning</h5>
+              <p class="card-text">Nunc placerat phareta lorem onec benean porttitor lectus sit sed amet quisque</p>
+              <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="background-img-gallery pt-4 my-lg-5 my-xl-5 d-none d-lg-block d-xl-block" id="gallery">
+      <div class="container px-lg-5 px-xl-5">
+        <div class="container mx-auto row py-3 py-lg-4 py-xl-4">
+          <div class="col text-center px-lg-5 px-xl-5">
+            <h2 class="text-white sub-heading-text">WORK GALLERY</h2>
+            <p class="text-white mx-auto px-md-5 px-lg-5 px-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor risus sit amet augue tempor, eget consequat risus porta. Proin condimentum nec ex sed dapibus.</p>
+          </div>
+        </div>
+
+        <div class="w-100 h-100 gap-3 d-flex flex-row align-items-center justify-content-center text-center">
+          <div class="col"><img src="/images/gallery one.png" width="250px" alt="" class="image-fluid"></div>
+          <div class="col"><img src="/images/gallery two.png" width="250px" alt="" class="image-fluid"></div>
+          <div class="col"><img src="/images/gallery one.png" width="250px" alt="" class="image-fluid"></div>
+          <div class="col"><img src="/images/gallery three.png" width="250px" alt="" class="image-fluid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Reviews -->
+    <!-- <div class="container py-4" id="reviews">
+      <div class="container mx-auto row py-3 py-lg-4 py-xl-4">
+        <div class="col text-center px-lg-5 px-xl-5">
+          <h2 class="sub-heading-text">CLIENT'S LOVE US</h2>
+          <p class="text-secondary pt-2 mx-auto px-md-5 px-lg-5 px-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor risus sit amet augue tempor, eget</p>
+        </div>
+      </div>
+
+      <div class="row py-5 py-sm-3 mx-lg-5 mx-xl-5">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-row">
+          <img src="/images/review1.png" alt="img" width="60px" height="60px" class="me-3">
+          <div class="d-flex flex-column pt-4">
+            <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lacus id justo varius molestie. Sed efficitur cursus dolor, sed venenatis ipsum rutrum ut.</p>
+            <h5>William</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-row">
+          <img src="/images/review2.png" alt="img" width="60px" height="60px" class="me-3">
+          <div class="d-flex flex-column pt-4">
+            <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lacus id justo varius molestie. Sed efficitur cursus dolor, sed venenatis ipsum rutrum ut.</p>
+            <h5>Nova</h5>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Reviews  Caresoul -->
+    <div class="container py-4 d-flex flex-column align-items-center justify-content-center" id="reviews">
+      <div class="container mx-auto row py-3 py-lg-4 py-xl-4">
+        <div class="col text-center px-lg-5 px-xl-5">
+          <h2 class="sub-heading-text">CLIENT'S LOVE US</h2>
+          <p class="text-secondary pt-2 mx-auto px-md-5 px-lg-5 px-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor risus sit amet augue tempor, eget</p>
+        </div>
+      </div>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="col-12 d-flex flex-row mx-auto reviews-width">
+              <img src="/images/review1.png" alt="img" width="60px" height="60px" class="me-3">
+              <div class="d-flex flex-column pt-4">
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lacus id justo varius molestie. Sed efficitur cursus dolor, sed venenatis ipsum rutrum ut.</p>
+                <h5>William</h5>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-12 d-flex flex-row mx-auto reviews-width">
+              <img src="/images/review2.png" alt="img" width="60px" height="60px" class="me-3">
+              <div class="d-flex flex-column pt-4">
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lacus id justo varius molestie. Sed efficitur cursus dolor, sed venenatis ipsum rutrum ut.</p>
+                <h5>Nova</h5>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-12 d-flex flex-row mx-auto reviews-width">
+              <img src="/images/review1.png" alt="img" width="60px" height="60px" class="me-3">
+              <div class="d-flex flex-column pt-4">
+                <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lacus id justo varius molestie. Sed efficitur cursus dolor, sed venenatis ipsum rutrum ut.</p>
+                <h5>William</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+      
+    <!-- Our Team -->
+    <div class="container py-3" id="teams">
+      <div class="container mx-auto row py-3 py-lg-4 py-xl-4">
+        <div class="col text-center px-lg-5 px-xl-5">
+          <h2 class="sub-heading-text">OUR EXPERT TEAM</h2>
+          <p class="text-secondary mx-auto px-md-5 px-lg-5 px-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor risus sit amet augue tempor,</p>
+        </div>
+      </div>
+
+      <div class="row container px-lg-5 px-xl-5">
+        <div class="card col-12 col-md-6 col-lg-3 col-xl-3 border-0 ps-1 pe-2">
+          <img src="/images/emp1.png" class="card-img-top" alt="...">
+          <div class="card-body ps-0 pe-0">
+            <h5 class="card-title">ALBERTO DEL RIO</h5>
+            <p class="card-text">Body Expert</p>
+            <div class="divider"></div>
+            <a class="empolye-icons" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-pinterest"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+        <div class="card col-12 col-md-6 col-lg-3 col-xl-3 border-0 ps-1 pe-2">
+          <img src="/images/emp2.png" class="card-img-top" alt="...">
+          <div class="card-body ps-0 pe-0">
+            <h5 class="card-title">ALBERTO DEL RIO</h5>
+            <p class="card-text">Body Expert</p>
+            <div class="divider"></div>
+            <a class="empolye-icons" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-pinterest"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+        <div class="card col-12 col-md-6 col-lg-3 col-xl-3 border-0 ps-1 pe-2">
+          <img src="/images/emp3.png" class="card-img-top" alt="...">
+          <div class="card-body ps-0 pe-0">
+            <h5 class="card-title">ALBERTO DEL RIO</h5>
+            <p class="card-text">Body Expert</p>
+            <div class="divider"></div>
+            <a class="empolye-icons" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-pinterest"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+        <div class="card col-12 col-md-6 col-lg-3 col-xl-3 border-0 ps-1 pe-2">
+          <img src="/images/emp1.png" class="card-img-top" alt="...">
+          <div class="card-body ps-0 pe-0">
+            <h5 class="card-title">ALBERTO DEL RIO</h5>
+            <p class="card-text">Body Expert</p>
+            <div class="divider"></div>
+            <a class="empolye-icons" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-pinterest"></i></a>
+            <a class="empolye-icons" href="#"><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="background-img-contact py-3 px-md-5 px-lg-5 px-xl-5" id="contact">
+      <div class="container mx-auto row py-3 py-lg-4 py-xl-4">
+        <div class="col text-center px-lg-5 px-xl-5">
+          <img src="/images/contact-icon.png" class="mb-2" width="60px" height="60px" alt="img">
+          <h2 class="sub-heading-text text-white">GET FREE APPOINTMENT</h2>
+          <p class="text-secondary mx-auto px-md-5 px-lg-5 px-xl-5 text-white">Keeping a well-maintained vehicle is paramount to your safety.</p>
+        </div>
+      </div>
+
+      <div class="h-auto bg-white p-3 mx-auto form-container">
+        <form action="">
+          <div class="row g-3">
+            <div class="col-4">
+              <input class="form-control" type="text" name="" id="" placeholder="Name" class="p-1">
+            </div>
+            <div class="col-4">
+              <input class="form-control" type="email" name="" id="" placeholder="Email" class="p-1">
+            </div>
+            <div class="col-4">
+              <input class="form-control" type="text" name="" id="" placeholder="Phone" class="p-1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <textarea class="form-control mt-3" rows="3" placeholder="Message"></textarea>
+            </div>
+          </div>
+        </form>
+        <div class="w-100 d-flex justify-content-center">
+          <button class="btn btn-danger mt-3">Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporters -->
+    <div class="supporters px-lg-5 px-xl-5 w-100 bg-danger pt-2">
+      <div class="d-flex container flex-row justify-content-center flex-wrap mx-lg-5 mx-xl-5">
+        <img src="/images/Frame 93.png" width="165px" alt="img">
+        <img src="/images/Frame 94.png" width="165px" alt="img">
+        <img src="/images/Frame 95.png" width="165px" alt="img">
+        <img src="/images/Frame 96.png" width="165px" alt="img">
+        <img src="/images/Frame 97.png" width="165px" alt="img">
+        <img src="/images/Frame 98.png" width="165px" alt="img">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer px-md-5 px-lg-5 px-xl-5">
+      <div class="container mx-auto px-lg-5 px-xl-5 row py-5">
+        <div class="col-12 col-md-4 col-lg-4 col-xl-4 px-lg-5 px-xl-5">
+          <a href="/"><img src="/images/Rectangle 1.png" alt="logo" width="150px"></a>
+          <p class="text-secondary py-3">Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit ametHere you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet</p>
+          <div class="footer-icons d-flex flex-row align-items-center gap-3">
+            <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="text-white" href="#"><i class="bi bi-pinterest"></i></a>
+            <a class="text-white" href="#"><i class="bi bi-google"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links col-12 mt-5 mt-md-0 mt-lg-0 mt-xl-0 col-md-4 col-lg-4 col-xl-4 px-lg-5 px-xl-5 text-white d-flex flex-column">
+          <h5 class="mb-3">QUICK LINKS</h5>
+          <a class="text-white pt-1" href="/">Home</a>
+          <a class="text-white pt-1" href="#about">About</a>
+          <a class="text-white pt-1" href="#services">Services</a>
+          <a class="text-white pt-1" href="#teams">Teams</a>
+          <a class="text-white pt-1" href="#gallery">Gallery</a>
+          <a class="text-white pt-1" href="#reviews">Reviews</a>
+          <a class="text-white pt-1" href="#contact">Contact Us</a>
+        </div>
+
+        <div class="footer-links col-12 mt-5 mt-md-0 mt-lg-0 mt-xl-0 col-md-4 col-lg-4 col-xl-4 px-lg-5 px-xl-5 text-white d-flex flex-column">
+          <h5 class="mb-3">CONTACT INFORMATION</h5>
+          <a class="text-white pt-1" href="tel:(+1) 96 716 6879"><i class="bi bi-telephone pe-2"></i>(+1) 96 716 6879</a>
+          <a class="text-white pt-1" href="mailto:carrepair@gmail.com"><i class="bi bi-envelope pe-2"></i>carrepair@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Tap to Top button -->
+    <div class="position-relative">
+      <a href="#/"><i class="bi bi-arrow-up-short text-danger position-fixed bottom-0 end-0 mb-2 me-3"></i></a>
+    </div>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
